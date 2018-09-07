@@ -17,7 +17,15 @@ public class Person2 {
 	 * @param pname the person's real name
 	 */
 	 public Person2(String pname) {
-	   name = pname;
+	 	name = pname;
+		 char[] text = pname.toCharArray();
+		 for (int i=0; i < text.length; i++) {
+			 int rand = (int)(Math.random() * text.length);
+			 char temp = text[i];
+			 text[i] = text[rand];
+			 text[rand] = temp;
+		 }
+		 return new String(text);
 	 }
 	/**
 	 * This method should take the string
