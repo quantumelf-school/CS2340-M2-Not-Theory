@@ -20,10 +20,10 @@ public class Person2 {
 	 	name = pname;
 		 char[] text = pname.toCharArray();
 		 for (int i=0; i < text.length; i++) {
-			 int rand = (int)(Math.random() * characters.length);
+			 int rand = (int)(Math.random() * text.length);
 			 char temp = text[i];
 			 text[i] = text[rand];
-			 text[randomIndex] = temp;
+			 text[rand] = temp;
 		 }
 		 return new String(text);
 	 }
