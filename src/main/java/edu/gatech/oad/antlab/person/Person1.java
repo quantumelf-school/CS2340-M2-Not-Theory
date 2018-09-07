@@ -30,8 +30,14 @@ public class Person1 {
 	 * @return the modified string
 	 */
 	private String calc(String input) {
-	  //Person 1 put your implementation here
-	  return null;
+		//Person 1 put your implementation here
+		char[] arr = input.toCharArray();
+		char[] shift = new char[input.length()];
+		for (int i = 0; i < arr.length; i++) {
+			shift[Math.floorMod(i + 2, arr.length)] = arr[i];
+		}
+		input = String.copyValueOf(shift);
+	  return input;
 	}
 	
 	/**
