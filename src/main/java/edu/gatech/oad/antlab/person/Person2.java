@@ -18,14 +18,7 @@ public class Person2 {
 	 */
 	 public Person2(String pname) {
 	 	name = pname;
-		 char[] text = pname.toCharArray();
-		 for (int i=0; i < text.length; i++) {
-			 int rand = (int)(Math.random() * text.length);
-			 char temp = text[i];
-			 text[i] = text[rand];
-			 text[rand] = temp;
-		 }
-		 return new String(text);
+
 	 }
 	/**
 	 * This method should take the string
@@ -39,7 +32,14 @@ public class Person2 {
 	 */
 	private String calc(String input) {
 	  //Person 2 put your implementation here
-	  return null;
+		char[] text = name.toCharArray();
+		for (int i=0; i < text.length; i++) {
+			int rand = (int)(Math.random() * text.length);
+			char temp = text[i];
+			text[i] = text[rand];
+			text[rand] = temp;
+		}
+		return new String(text);
 	}
 	/**
 	 * Return a string rep of this object
